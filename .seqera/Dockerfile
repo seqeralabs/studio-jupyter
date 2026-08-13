@@ -12,12 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ARG CONNECT_CLIENT_VERSION=0.12.2
+ARG CONNECT_CLIENT_VERSION=0.13.0
 FROM public.cr.seqera.io/platform/connect-client:${CONNECT_CLIENT_VERSION} AS connect
 
-
-FROM mambaorg/micromamba:2.5.0 as micromamba
-
+FROM mambaorg/micromamba:2.8.1-ubuntu24.04 AS micromamba
 
 FROM ubuntu:24.04
 
@@ -65,6 +63,8 @@ RUN /usr/local/bin/_dockerfile_initialize_user_accounts.sh && \
 
 SHELL ["/usr/local/bin/_dockerfile_shell.sh"]
 COPY --chown=$MAMBA_USER:$MAMBA_USER ./env.yaml /tmp/env.yaml
+
+# Clean install step without requiring strict ulimit suppression
 RUN micromamba install --yes --name base --file /tmp/env.yaml && \
     micromamba clean --all --yes
 
