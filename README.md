@@ -6,10 +6,10 @@ check the existing tags using the pattern: `jupyter/<version>/connect/<version>`
 
 ## Components
 
-- **[JupyterLab](https://jupyterlab.readthedocs.io/) 4.2.5** — browser-based interactive notebook environment
+- **[JupyterLab](https://jupyterlab.readthedocs.io/) 4.6.0** — browser-based interactive notebook environment
 - **Python 3.13** — via micromamba/conda-forge
-- **Data science libraries** — pandas, scikit-learn, statsmodels, seaborn, plotly, altair, r-ggplot2, ipywidgets, itables
-- **Jupyter extensions** — jupyterlab-git, jupytext, jupyter-collaboration, jupyter-dash
+- **Data science libraries** — pandas, polars, scikit-learn, statsmodels, seaborn, plotly, altair, r-ggplot2, ipywidgets, itables
+- **Jupyter extensions** — jupyterlab-git, jupytext, jupyter-collaboration, jupyterlab_code_formatter
 - **connect-client** — Seqera connect client for studio integration
 
 ## Repository Structure
@@ -36,5 +36,5 @@ To create a customized version:
 The pre-built image is available at:
 
 ```
-public.cr.seqera.io/platform/data-studio-jupyter:4.2.5-0.12.2
+public.cr.seqera.io/platform/data-studio-jupyter:4.6.0-0.13.0
 ```
