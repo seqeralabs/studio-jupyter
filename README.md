@@ -36,5 +36,5 @@ To create a customized version:
 The pre-built image is available at:
 
 ```
-public.cr.seqera.io/platform/data-studio-jupyter:4.6.0-0.13.0
+public.cr.seqera.io/platform/data-studio-jupyter:4.6.0-0.14.0
 ```
